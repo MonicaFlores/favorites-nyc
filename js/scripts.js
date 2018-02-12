@@ -1,5 +1,6 @@
 var defaultCenter = [40.713435,-73.971291];
 var defaultZoom = 12;
+var closeZoom = 8;
 
 var map = L.map('my-map').setView(defaultCenter, defaultZoom);
 
@@ -59,11 +60,35 @@ var places = [
 places.forEach(function(placeObject) {
   var latLon = [placeObject.lat, placeObject.lon];
 
-  var options = {
-    radius:10,
-    fillColor: 'red'
-  }
+  var schoolColor = 'gray';
 
-  L.circleMarker(latLon, options).addTo(map)
+  if (placeObject.hours === 'Night') hourColor = 'navy';
+  if (placeObject.hours === 'Evening') hourColor = 'purple';
+  if (placeObject.hours === 'Morning/Afternoon') hourColor = 'yellow';
+
+  var options = {
+    radius: 6,
+    opacity: 1,
+    fillColor: hourColor,
+    fillOpacity: 0.9,
+    color: '#FFF',
+    weight: 2,
+  };
+
+  L.circleMarker(latLon, options)
+      .addTo(map)
       .bindPopup(placeObject.description1 + placeObject.placeName +  placeObject.description2);
+      .dblclick(function() {
+      map.flyTo(placeObject.latLon, closeZoom)
+      });
+      
+});
+
+// Try to create a double click function for each object -> double click on marker
+//$('.circleMarker').dblclick(function() {
+//map.flyTo(placeObject.latLon, closeZoom)
+//});
+
+$('.zoomOut').click(function() {
+  map.flyTo(defaultCenter, defaultZoom)
 });
