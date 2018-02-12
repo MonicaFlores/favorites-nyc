@@ -35,3 +35,29 @@ button {
 /*Should I remove this?*/
 .legendItem {
 }
+
+.legendItem::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 16.5px;
+  border: 2px solid #FFF;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+
+.night::before {
+  background-color: blue;
+}
+
+.evening::before {
+  background-color: purple;
+}
+
+.morning::before {
+  background-color: yellow;
+}
