@@ -1,66 +1,49 @@
-var map = L.map('my-map').setView([40.713435,-73.971291], 12);
+var defaultCenter = [40.713435,-73.971291];
+var defaultZoom = 12;
+
+var map = L.map('my-map').setView(defaultCenter, defaultZoom);
 
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var pizzaData = [
+var places = [
   {
-    name: 'Chris',
-    pizzaShop: "Ben's Pizza",
-    lat: 40.730376,
-    lon: -74.0008582,
-    school: 'Wagner',
+    placeName: 'The Good Room',
+    description1: "Going to shady Brooklyn Clubs like ",
+    description2: ", located in Greenpoint",
+    lat: 40.726935,
+    lon: -73.952909,
+    hours: 'Night',
   },
+
   {
-    name: 'Maxwell',
-    pizzaShop: "Joe's",
-    lat: 40.7305876,
-    lon: -74.002141,
-    school: 'Wagner',
+    placeName: 'Friends and Lovers',
+    description1: "Dancing to the rithm of funky-disco music at ",
+    description2: ".",
+    lat: 40.678564,
+    lon: -73.958542,
+    hours: 'Night',
   },
+
   {
-    name: 'Paolo',
-    pizzaShop: "John's of Bleeker",
-    lat: 40.725717,
-    lon: -73.991492,
-    school: 'Wagner',
+    placeName: 'Williamsburg Bridge',
+    description1: "Biking across the ",
+    description2: " on a summer sunset.",
+    lat: 40.713668,
+    lon: -73.972110,
+    hours: 'Evening',
   },
+
   {
-    name: 'Rigel',
-    pizzaShop: "Di Fara",
-    lat: 40.6250156,
-    lon: -73.9659225,
-    school: 'Life',
+    placeName: 'Prospect Park',
+    description1: "Having pic-nic at ",
+    description2: " in a sunny day.",
+    lat: 40.713668,
+    lon: -73.972110,
+    hours: 'Morning/Afternoon',
   },
-  {
-    name: 'Jack',
-    pizzaShop: "Paulie Gee's",
-    lat: 40.729662,
-    lon: -73.958579,
-    school: 'CUSP',
-  },
-  {
-    name: 'Lisanne',
-    pizzaShop: "ZuriLee",
-    lat: 40.6545,
-    lon: -73.9594,
-    school: 'Life',
-  },
-  {
-    name: 'Niki',
-    pizzaShop: "Pizza Palace",
-    lat: 40.77638,
-    lon: -73.9112052,
-    school: 'Life',
-  },
-  {
-    name: 'Monica',
-    pizzaShop: "Percy's Pizza",
-    lat: 40.72915,
-    lon: -74.001398,
-    school: 'Wagner',
-  },
+
 ];
 
 
@@ -68,13 +51,13 @@ var pizzaData = [
 // var chrisPizza = pizzaData[0];
 //
 // L.marker([chrisPizza.lat, chrisPizza.lon]).addTo(map)
-//     .bindPopup(chrisPizza.name + ' likes to eat at ' +  chrisPizza.pizzaShop);
+//     .bindPopup(chrisPizza.placeName + ' likes to eat at ' +  chrisPizza.description);
 
 
 // how to add a marker for each object in the array
 
-pizzaData.forEach(function(pizzaObject) {
-  var latLon = [pizzaObject.lat, pizzaObject.lon];
+places.forEach(function(placeObject) {
+  var latLon = [placeObject.lat, placeObject.lon];
 
   var options = {
     radius:10,
@@ -82,5 +65,5 @@ pizzaData.forEach(function(pizzaObject) {
   }
 
   L.circleMarker(latLon, options).addTo(map)
-      .bindPopup(pizzaObject.name + ' likes to eat at ' +  pizzaObject.pizzaShop);
+      .bindPopup(placeObject.description1 + placeObject.placeName +  placeObject.description2);
 });
