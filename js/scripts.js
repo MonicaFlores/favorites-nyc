@@ -43,7 +43,7 @@ var places = [
     lat: 40.668042,
     lon: -73.970421,
     hours: 'Morning/Afternoon',
-  },
+  }
 
 ];
 
@@ -60,9 +60,9 @@ var places = [
 places.forEach(function(placeObject) {
   var latLon = [placeObject.lat, placeObject.lon];
 
-  var schoolColor = 'gray';
+  var schoolColor = 'grey';
 
-  if (placeObject.hours === 'Night') hourColor = 'navy';
+  if (placeObject.hours === 'Night') hourColor = 'blue';
   if (placeObject.hours === 'Evening') hourColor = 'purple';
   if (placeObject.hours === 'Morning/Afternoon') hourColor = 'yellow';
 
@@ -75,13 +75,12 @@ places.forEach(function(placeObject) {
     weight: 2,
   };
 
-  L.circleMarker(latLon, options)
-      .addTo(map)
+  L.circleMarker(latLon, options).addTo(map)
       .bindPopup(placeObject.description1 + placeObject.placeName +  placeObject.description2);
-      .dblclick(function() {
-      map.flyTo(placeObject.latLon, closeZoom)
-      });
-      
+    //  .dblclick(function() {
+    //  map.flyTo(placeObject.latLon, closeZoom)
+    //  });
+
 });
 
 // Try to create a double click function for each object -> double click on marker
