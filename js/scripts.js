@@ -39,8 +39,8 @@ var places = [
     placeName: 'Prospect Park',
     description1: "Having pic-nic at ",
     description2: " in a sunny day.",
-    lat: 40.713668,
-    lon: -73.972110,
+    lat: 40.668042,
+    lon: -73.970421,
     hours: 'Morning/Afternoon',
   },
 
