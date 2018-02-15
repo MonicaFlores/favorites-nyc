@@ -10,7 +10,7 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/
 
 var places = [
   {
-    placeName: 'The Good Room',
+    placeName: '<a href="https://goo.gl/BWyGgr">The Good Room<a>',
     description1: "Going to shady Brooklyn Clubs like ",
     description2: ", located in Greenpoint",
     lat: 40.726935,
@@ -19,7 +19,7 @@ var places = [
   },
 
   {
-    placeName: 'Friends and Lovers',
+    placeName: '<a href="https://goo.gl/Hj48UU">Friends and Lovers<a>',
     description1: "Dancing to the rithm of funky-disco music at ",
     description2: ".",
     lat: 40.678564,
@@ -28,7 +28,7 @@ var places = [
   },
 
   {
-    placeName: 'Williamsburg Bridge',
+    placeName: '<a href="https://goo.gl/qBWcdj">Williamsburg Bridge</a>',
     description1: "Biking across the ",
     description2: " on a summer sunset.",
     lat: 40.713668,
@@ -37,8 +37,8 @@ var places = [
   },
 
   {
-    placeName: 'Prospect Park',
-    description1: "Having pic-nic at ",
+    placeName: '<a href="https://goo.gl/eqdqsu">Prospect Park</a>',
+    description1: "Having picnic at ",
     description2: " in a sunny day.",
     lat: 40.668042,
     lon: -73.970421,
@@ -46,7 +46,7 @@ var places = [
   },
 
   {
-    placeName: 'McNally Jackson',
+    placeName: '<a href="https://goo.gl/ZcGLRy">McNally Jackson</a>',
     description1: "Book shopping and having a coffee at ",
     description2: " Independent Bookstore.",
     lat: 40.723417,
