@@ -54,7 +54,6 @@ var places = [
     hours: 'Morning/Afternoon',
   },
 
-
    {
     placeName: '<a href="https://goo.gl/QWYirb">The Royal Palms Shuffleboard Club</a>',
     description1: "Play shuffleboard while having tropical drinks at  ",
@@ -64,7 +63,14 @@ var places = [
     hours: 'All-Day-Long',
   },
 
-
+  {
+    placeName: '<a href="https://goo.gl/ZoLcGD">Vbar</a>',
+    description1: "Enjoy a glass of wine after work at the cozy",
+    description2: ", for only $6 before 8pm.",
+    lat: 40.729558,
+    lon: -73.999592,
+    hours: 'Evening',
+  },
 ];
 
 
