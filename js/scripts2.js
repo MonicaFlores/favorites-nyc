@@ -55,6 +55,16 @@ var places = [
   },
 
 
+   {
+    placeName: '<a href="https://goo.gl/QWYirb">The Royal Palms Shuffleboard Club</a>',
+    description1: "Play shuffleboard while having tropical drinks at  ",
+    description2: ".",
+    lat: 40.678718,
+    lon: -73.986897,
+    hours: 'All-Day-Long',
+  },
+
+
 ];
 
 
@@ -75,6 +85,7 @@ places.forEach(function(placeObject) {
   if (placeObject.hours === 'Night') hourColor = 'blue';
   if (placeObject.hours === 'Evening') hourColor = 'purple';
   if (placeObject.hours === 'Morning/Afternoon') hourColor = 'yellow';
+  if (placeObject.hours === 'All-Day-Long') hourColor = 'grey';
 
   var options = {
     radius: 6,

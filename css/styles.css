@@ -103,6 +103,9 @@ button:hover {
 .morning::before {
   background-color: yellow;
 }
+.allday::before {
+  background-color: grey;
+}
 
 /* unvisited link */
 a:link {
