@@ -92,7 +92,7 @@ places.forEach(function(placeObject) {
     opacity: 1,
     fillColor: hourColor,
     fillOpacity: 0.9,
-    color: 'grey',
+    color: 'white',
     weight: 2,
   };
 
