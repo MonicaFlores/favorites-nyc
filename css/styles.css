@@ -133,3 +133,10 @@ a:active {
     background-color: #c4c4d4;
     opacity: 0.8;
 }
+
+/*reference not working*/
+.circleMarker:hover{
+  border-style: dashed;
+  border-color: black;
+  border-width: 2px ;
+}
